@@ -13,3 +13,11 @@ services:
       LDAP_BASE_DN: "${LDAP_BASE_DN}"
       LDAP_BACKEND: "${LDAP_BACKEND}"
       LDAP_TLS: "${LDAP_TLS}"
+
+  phpldapadmin:
+    image: osixia/phpldapadmin:latest
+    environment:
+      PHPLDAPADMIN_LDAP_HOSTS: openldap
+      PHPLDAPADMIN_HTTPS: "${PHPLDAPADMIN_HTTPS}"
+    ports:
+      - "8080:80"
