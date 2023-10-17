@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  openldap:
+    build: .
+    ports:
+      - "389:389"
+      - "636:636"
+    environment:
+      LDAP_ORGANISATION: "${LDAP_ORGANISATION}"
+      LDAP_DOMAIN: "${LDAP_DOMAIN}"
+      LDAP_ROOTPASS: "${LDAP_ROOTPASS}"
+      LDAP_BASE_DN: "${LDAP_BASE_DN}"
+      LDAP_BACKEND: "${LDAP_BACKEND}"
+      LDAP_TLS: "${LDAP_TLS}"
