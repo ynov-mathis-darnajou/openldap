@@ -15,5 +15,5 @@ changetype: modify
 replace: olcRootPW
 olcRootPW: $(slappasswd -s $LDAP_ROOTPASS)
 EOF
-
+echo "The LDAP server is ready to use"
 tail -f /dev/null
